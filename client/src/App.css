@@ -1,0 +1,99 @@
+/* App.css */
+
+/* CSS Variables for Consistent Theming */
+:root {
+  --primary-green: #1a5f3f; /* Dark green */
+  --accent-gold: #d4a017;   /* Gold */
+  --background-cream: #f8f1e9; /* Cream white */
+  --text-dark: #333;        /* Dark gray */
+  --white: #fff;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-cream);
+  color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-green);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+}
+
+/* General Button Styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-success {
+  background-color: #25d366;
+}
+
+.btn-success:hover {
+  background-color: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
